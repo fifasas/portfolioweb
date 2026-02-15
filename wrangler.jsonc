@@ -1,0 +1,7 @@
+{
+  "name": "portfolioweb",
+  "compatibility_date": "2026-02-15",
+  "assets": {
+    "directory": "./dist"
+  }
+}
