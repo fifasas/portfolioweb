@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://filiplnenicka.cz/sitemap.xml
