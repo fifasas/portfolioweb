@@ -81,19 +81,19 @@ const Photography = () => {
       name: "Nikon D7500",
       type: "Photography Body",
       desc: "A reliable powerhouse for nature and wildlife photography. Excellent performance in challenging environments.",
-      image: "/images/gear/D7500.png"
+      image: "/images/gear/D7500.webp"
     },
     {
       name: "Nikkor 70-200mm f/2.8",
       type: "Telephoto Lens",
       desc: "Essential for wildlife. It allows me to stay at a distance while capturing sharp, intimate moments with beautiful compression.",
-      image: "/images/gear/70-200mm.png"
+      image: "/images/gear/70-200mm.webp"
     },
     {
       name: "50mm f/1.8 Prime",
       type: "Portrait Lens",
       desc: "The go-to for portraits and product shots. Razor-sharp focus with a shallow depth of field for that professional look.",
-      image: "/images/gear/50mm.png"
+      image: "/images/gear/50mm.webp"
     }
   ];
 
@@ -102,25 +102,25 @@ const Photography = () => {
       name: "Sony FX30",
       type: "Cinema Line Body",
       desc: "My primary tool for high-end video production. Professional color science and incredible 4K detail for cinematic storytelling.",
-      image: "/images/gear/FX30.png"
+      image: "/images/gear/FX30.webp"
     },
     {
       name: "11mm Ultra-Wide",
       type: "Landscape & Video Lens",
       desc: "Capturing the full scale of the world. Perfect for dramatic landscapes and unique architectural perspectives in video.",
-      image: "/images/gear/11mm.png"
+      image: "/images/gear/11mm.webp"
     },
     {
       name: "18-105mm Zoom",
       type: "Versatile Video Lens",
       desc: "The perfect all-rounder for travel and fast-paced events where swapping lenses isn't an option.",
-      image: "/images/gear/18-105mm.png"
+      image: "/images/gear/18-105mm.webp"
     },
     {
       name: "Professional Gimbal",
       type: "Stabilization",
       desc: "Ensuring every cinematic shot is buttery smooth. Crucial for dynamic movement and professional video delivery.",
-      image: "/images/gear/Gimbal.png"
+      image: "/images/gear/Gimbal.webp"
     }
   ];
 
@@ -230,7 +230,7 @@ const Photography = () => {
             to="/gallery" 
             className="inline-flex items-center gap-3 px-10 py-5 bg-white/5 border border-white/10 rounded-full hover:bg-white hover:text-black transition-all font-black uppercase tracking-widest group"
           >
-            Load More <Camera size={20} className="group-hover:rotate-12 transition-transform" />
+            {t('photography.loadMore')} <Camera size={20} className="group-hover:rotate-12 transition-transform" />
           </Link>
         </div>
       </div>

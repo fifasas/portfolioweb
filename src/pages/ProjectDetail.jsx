@@ -1,6 +1,6 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projects } from '../data/projects';
 import { useTranslation } from 'react-i18next';
@@ -12,9 +12,23 @@ import {
 const ProjectDetail = () => {
   const { id } = useParams();
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [selectedImg, setSelectedImg] = React.useState(null);
   const project = projects.find(p => p.id === id);
   const trans = t(`projectData.${id}`, { returnObjects: true });
+  const projectCategoryLabel =
+    project?.category === 'Photography'
+      ? t('nav.photography')
+      : t('nav.webCreation');
+
+  const handleBackNavigation = () => {
+    if (window.history.length > 1) {
+      navigate(-1);
+      return;
+    }
+
+    navigate(project?.category === 'Photography' ? '/photography' : '/works');
+  };
 
   // Lock scroll when modal is open
   React.useEffect(() => {
@@ -31,9 +45,9 @@ const ProjectDetail = () => {
   if (!project || !trans) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center">
-        <h1 className="text-4xl font-bold mb-4">Project not found</h1>
+        <h1 className="text-4xl font-bold mb-4">{t('projectDetail.notFoundTitle')}</h1>
         <Link to="/" className="text-primary hover:underline flex items-center gap-2">
-          <ArrowLeft size={20} /> Back to home
+          <ArrowLeft size={20} /> {t('projectDetail.notFoundBack')}
         </Link>
       </div>
     );
@@ -43,9 +57,9 @@ const ProjectDetail = () => {
     <div className="min-h-screen pb-20 pt-32 md:pt-40">
       {/* Header / Hero */}
       <section className="container mx-auto px-6 mb-20">
-        <Link to={-1} className="inline-flex items-center gap-2 text-gray-500 hover:text-white transition-colors mb-12 group">
+        <button onClick={handleBackNavigation} className="inline-flex items-center gap-2 text-gray-500 hover:text-white transition-colors mb-12 group cursor-pointer">
           <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" /> {t('projectDetail.back')}
-        </Link>
+        </button>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-end">
           <motion.div
@@ -53,7 +67,7 @@ const ProjectDetail = () => {
             animate={{ opacity: 1, x: 0 }}
           >
             <span className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 block">
-              {trans.category}
+              {projectCategoryLabel}
             </span>
             <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter leading-none uppercase">
               {trans.title}
@@ -124,7 +138,7 @@ const ProjectDetail = () => {
                 <Target size={18} /> {t('projectDetail.clientGoal')}
               </h2>
               <p className="text-white font-medium leading-relaxed italic">
-                "{trans.clientGoal}"
+                <span>&ldquo;{trans.clientGoal}&rdquo;</span>
               </p>
             </div>
           </div>
@@ -251,7 +265,7 @@ const ProjectDetail = () => {
       {/* Bottom Navigation */}
       <section className="container mx-auto px-6 mt-32 pt-20 border-t border-white/5 flex justify-between items-center">
         <button 
-          onClick={() => window.history.back()} 
+          onClick={handleBackNavigation} 
           className="text-gray-500 hover:text-white transition-colors flex items-center gap-2 font-bold cursor-pointer"
         >
           <ArrowLeft size={20} /> {t('projectDetail.backToProjects')}

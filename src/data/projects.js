@@ -177,6 +177,15 @@ export const projects = [
     fullDesc: "A collection of commercial product shoots, highlighted by the 'Samolepící výztužná páska' project. These shoots require extreme attention to detail, texture, and technical lighting to showcase products in their best possible light for e-commerce and catalog use.",
     image: "/images/gallery/paska.jpg",
     tags: ["Commercial", "Studio Lighting", "Product"],
+    gallery: [
+      "/images/gallery/paska.jpg",
+      "/images/gallery/Motorka1Vodoznak.webp",
+      "/images/gallery/Motorka3Vodoznak.webp",
+      "/images/gallery/Motorka5Vodoznak.webp",
+      "/images/gallery/Motorka6Vodoznak.webp",
+      "/images/gallery/Motorka7Vodoznak.webp",
+      "/images/gallery/MotorkaDetail3Vodoznak.webp"
+    ],
     clientGoal: "Highlight product textures and technical details to increase customer confidence and drive sales in catalog environments.",
     process: [
       { title: "Technical", desc: "Understanding product material properties." },

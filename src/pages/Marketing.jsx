@@ -16,38 +16,31 @@ const Marketing = () => {
   const marketingServices = [
     {
       icon: <Users size={32} />,
-      title: t('whyMe.items.systems.label'), // Using existing keys where possible or mapped
-      desc: t('whyMe.items.systems.desc'),
+      title: t('marketing.services.audience.title'),
+      desc: t('marketing.services.audience.desc'),
       color: "rgba(59, 130, 246, 0.2)"
     },
     {
       icon: <PenTool size={32} />,
-      title: "Content & Copywriting",
-      desc: "High-conversion copy and storytelling that resonates with your audience and builds authority.",
+      title: t('marketing.services.content.title'),
+      desc: t('marketing.services.content.desc'),
       color: "rgba(139, 92, 246, 0.2)"
     },
     {
       icon: <Target size={32} />,
-      title: "Performance Marketing",
-      desc: "Data-driven ad campaigns (Meta, Google) designed to maximize ROI and scale customer acquisition.",
+      title: t('marketing.services.performance.title'),
+      desc: t('marketing.services.performance.desc'),
       color: "rgba(239, 68, 68, 0.2)"
     },
     {
       icon: <PieChart size={32} />,
-      title: "Brand Strategy",
-      desc: "Defining your unique value proposition and positioning your brand to dominate its niche.",
+      title: t('marketing.services.brand.title'),
+      desc: t('marketing.services.brand.desc'),
       color: "rgba(34, 197, 94, 0.2)"
     }
   ];
 
-  const processSteps = [
-    { title: "Audit", desc: "Analyzing your current presence and competitors." },
-    { title: "Strategy", desc: "Defining clear KPIs and growth roadmap." },
-    { title: "Creative", desc: "Developing high-impact visual and text assets." },
-    { title: "Execution", desc: "Launching campaigns and content cycles." },
-    { title: "Analytics", desc: "Deep-dive tracking and performance reporting." },
-    { title: "Scale", desc: "Optimizing winning strategies for maximum reach." }
-  ];
+  const processSteps = t('marketing.process', { returnObjects: true });
 
   return (
     <div className="min-h-screen pb-20 bg-transparent text-white">
@@ -106,19 +99,19 @@ const Marketing = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex items-center gap-4 text-white">
                   <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary"><Zap size={20} /></div>
-                  <span className="font-bold">AI Automation</span>
+                  <span className="font-bold">{t('marketing.methodFeatures.automation')}</span>
                 </div>
                 <div className="flex items-center gap-4 text-white">
                   <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary"><LineChart size={20} /></div>
-                  <span className="font-bold">Data Analysis</span>
+                  <span className="font-bold">{t('marketing.methodFeatures.analysis')}</span>
                 </div>
                 <div className="flex items-center gap-4 text-white">
                   <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary"><Users size={20} /></div>
-                  <span className="font-bold">Human Centric</span>
+                  <span className="font-bold">{t('marketing.methodFeatures.human')}</span>
                 </div>
                 <div className="flex items-center gap-4 text-white">
                   <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary"><Globe size={20} /></div>
-                  <span className="font-bold">Global Scale</span>
+                  <span className="font-bold">{t('marketing.methodFeatures.global')}</span>
                 </div>
               </div>
             </div>

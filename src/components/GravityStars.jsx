@@ -5,8 +5,6 @@ const GravityStars = ({
   starsCount = 200,
   starsSize = 2,
   starsOpacity = 0.5,
-  glowIntensity = 10,
-  glowAnimation = 'ease',
   movementSpeed = 0.2,
   mouseInfluence = 200,
   mouseGravity = 'attract',
@@ -14,7 +12,6 @@ const GravityStars = ({
   starsInteraction = true,
   starsInteractionType = 'bounce',
   className,
-  ...props
 }) => {
   const containerRef = React.useRef(null);
   const canvasRef = React.useRef(null);

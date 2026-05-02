@@ -104,7 +104,33 @@
     ]
   },
   "faq": {
-    "title": "Časté dotazy"
+    "title": "Časté dotazy",
+    "items": [
+      {
+        "question": "S kým nejčastěji spolupracuješ?",
+        "answer": "Nejčastěji pracuji se službovými firmami, tvůrci a rostoucími značkami, které chtějí výkonnostní weby a chytrou automatizaci — ne jen vizuální redesign."
+      },
+      {
+        "question": "Co ode mě potřebuješ, abys mohl začít?",
+        "answer": "Základní cíle, cílovou skupinu, existující materiály (pokud nějaké máte) a krátký úvodní call. Zbytek procesu vás provedu krok za krokem."
+      },
+      {
+        "question": "Jak integruješ AI do webových projektů?",
+        "answer": "AI používám od inteligentního generování obsahu a personalizovaných uživatelských zážitků až po backendovou automatizaci a analýzu dat. Každý projekt dostává vlastní AI strategii."
+      },
+      {
+        "question": "Bereš i mezinárodní projekty?",
+        "answer": "Ano, spolupracuji s klienty po celém světě. Můj workflow je plně optimalizovaný pro remote spolupráci, takže komunikace funguje hladce napříč časovými pásmy."
+      },
+      {
+        "question": "Jaký je obvyklý timeline projektu?",
+        "answer": "Záleží na složitosti. Výkonnostní landing page obvykle trvá 1–2 týdny, zatímco komplexnější full-stack aplikace nebo kompletní rebrand mohou zabrat 4–8 týdnů."
+      },
+      {
+        "question": "Dokážeš pracovat i s mým stávajícím webem nebo stackem?",
+        "answer": "Ve spoustě případů ano. Existující systémy mohu rozšířit, optimalizovat nebo přestavět podle jejich stavu a vašich cílů."
+      }
+    ]
   },
   "finalCta": {
     "title": "Pojďme tvořit budoucnost.",
@@ -141,12 +167,30 @@
     "projectTypes": "Typy projektů",
     "ownershipModels": "Modely vlastnictví",
     "types": {
-      "static": { "title": "Statické a brandové weby", "desc": "Vysoce výkonné landing pages a firemní portfolia optimalizovaná pro rychlost a SEO." },
-      "ecommerce": { "title": "E-commerce systémy", "desc": "E-shopy na míru se správou produktů, zabezpečenými platbami a sledováním." },
-      "apps": { "title": "Webové aplikace", "desc": "Interaktivní dashboardy, zákaznické portály a interní nástroje s autentizací uživatelů." },
-      "cms": { "title": "CMS a obsahové uzly", "desc": "Škálovatelné platformy pro blogy, magazíny nebo zprávy se snadnou správou obsahu." },
-      "booking": { "title": "Rezervační systémy", "desc": "Integrované kalendářní systémy pro servisní firmy pro automatické vyřizování schůzek." },
-      "ai": { "title": "Platformy poháněné AI", "desc": "Vlastní implementace LLM a generativních AI nástrojů zabudovaných přímo do vašeho webového rozhraní." }
+      "static": {
+        "title": "Statické a brandové weby",
+        "desc": "Vysoce výkonné landing pages a firemní portfolia optimalizovaná pro rychlost a SEO."
+      },
+      "ecommerce": {
+        "title": "E-commerce systémy",
+        "desc": "E-shopy na míru se správou produktů, zabezpečenými platbami a sledováním."
+      },
+      "apps": {
+        "title": "Webové aplikace",
+        "desc": "Interaktivní dashboardy, zákaznické portály a interní nástroje s autentizací uživatelů."
+      },
+      "cms": {
+        "title": "CMS a obsahové uzly",
+        "desc": "Škálovatelné platformy pro blogy, magazíny nebo zprávy se snadnou správou obsahu."
+      },
+      "booking": {
+        "title": "Rezervační systémy",
+        "desc": "Integrované kalendářní systémy pro servisní firmy pro automatické vyřizování schůzek."
+      },
+      "ai": {
+        "title": "Platformy poháněné AI",
+        "desc": "Vlastní implementace LLM a generativních AI nástrojů zabudovaných přímo do vašeho webového rozhraní."
+      }
     },
     "ownership": {
       "full": {
@@ -161,6 +205,10 @@
         "label": "Škálovatelná služba",
         "btn": "Chci si pronajmout"
       }
+    },
+    "finalCta": {
+      "subtitle": "Přestaňte hádat a začněte stavět. Pojďme vytvořit digitální zážitek, který bude skutečně fungovat pro vaše podnikání.",
+      "button": "Začít"
     }
   },
   "marketing": {
@@ -174,7 +222,57 @@
     "methodologyDesc": "Marketing není hádání. Je to systém. Kombinuji psychologické poznatky s technickou automatizací, aby každé vynaložené euro pracovalo dvakrát usilovněji.",
     "ctaTitle": "ŠKÁLUJTE SVOU ZNAČKU",
     "ctaSubtitle": "Jste připraveni přestat křičet do prázdna? Pojďme vybudovat marketingový systém, který skutečně generuje výsledky.",
-    "ctaBtn": "Rezervovat strategický hovor"
+    "ctaBtn": "Rezervovat strategický hovor",
+    "services": {
+      "audience": {
+        "title": "Strategie publika a funnelu",
+        "desc": "Ujasnění toho, koho chcete oslovit, co potřebují slyšet a jak je převést od prvního kontaktu k poptávce."
+      },
+      "content": {
+        "title": "Obsah a copywriting",
+        "desc": "Konverzní texty a storytelling, které budují autoritu a zároveň dělají vaši nabídku srozumitelnější."
+      },
+      "performance": {
+        "title": "Výkonnostní marketing",
+        "desc": "Datově řízené kampaně napříč vyhledáváním i sociálními sítěmi navržené pro maximální návratnost investice."
+      },
+      "brand": {
+        "title": "Brand strategie",
+        "desc": "Positioning, messaging a strategická jasnost, které pomáhají značce vyniknout na přeplněném trhu."
+      }
+    },
+    "methodFeatures": {
+      "automation": "AI automatizace",
+      "analysis": "Analýza dat",
+      "human": "Lidský přístup",
+      "global": "Globální škálování"
+    },
+    "process": [
+      {
+        "title": "Audit",
+        "desc": "Analýza vaší současné prezentace a konkurence."
+      },
+      {
+        "title": "Strategie",
+        "desc": "Definování jasných KPI a roadmapy růstu."
+      },
+      {
+        "title": "Kreativa",
+        "desc": "Tvorba silných vizuálů a copy assetů."
+      },
+      {
+        "title": "Exekuce",
+        "desc": "Spuštění kampaní a obsahových systémů."
+      },
+      {
+        "title": "Analytika",
+        "desc": "Měření výkonu a hledání konkrétních insightů."
+      },
+      {
+        "title": "Škálování",
+        "desc": "Posilování toho, co funguje, a odstraňování neefektivity."
+      }
+    ]
   },
   "photography": {
     "heroTag": "Vizuální vyprávění",
@@ -191,7 +289,8 @@
     "kitTitle": "ARZENÁL",
     "kitSubtitle": "Profesionální nástroje pro tvorbu špičkového vizuálního obsahu.",
     "photography": "Pro fotografii",
-    "videography": "Pro videografii"
+    "videography": "Pro videografii",
+    "loadMore": "Načíst více"
   },
   "ai": {
     "heroTag": "Inteligence v měřítku",
@@ -206,10 +305,22 @@
     "ctaSubtitle": "Nezůstávejte pozadu. Pojďme najít konkrétní místa, kde AI může dát vašemu podnikání nefér výhodu.",
     "ctaBtn": "Spustit implementaci AI",
     "solutions": {
-      "chatbots": { "title": "Chatboti na míru", "desc": "Inteligentní zákaznická podpora a obchodní agenti trénovaní na vašich datech pro zapojení 24/7." },
-      "workflow": { "title": "Automatizace procesů", "desc": "Automatizace opakujících se úkolů propojením AI modelů s vaším stávajícím softwarem pro úsporu hodin ruční práce." },
-      "analysis": { "title": "AI analýza dat", "desc": "Získávání užitečných poznatků z velkých datových sad pomocí LLM pro chytřejší obchodní rozhodnutí." },
-      "gen": { "title": "Generativní systémy", "desc": "Implementace nástrojů pro generování textu, obrázků a hlasu přizpůsobených kreativním požadavkům vaší značky." }
+      "chatbots": {
+        "title": "Chatboti na míru",
+        "desc": "Inteligentní zákaznická podpora a obchodní agenti trénovaní na vašich datech pro zapojení 24/7."
+      },
+      "workflow": {
+        "title": "Automatizace procesů",
+        "desc": "Automatizace opakujících se úkolů propojením AI modelů s vaším stávajícím softwarem pro úsporu hodin ruční práce."
+      },
+      "analysis": {
+        "title": "AI analýza dat",
+        "desc": "Získávání užitečných poznatků z velkých datových sad pomocí LLM pro chytřejší obchodní rozhodnutí."
+      },
+      "gen": {
+        "title": "Generativní systémy",
+        "desc": "Implementace nástrojů pro generování textu, obrázků a hlasu přizpůsobených kreativním požadavkům vaší značky."
+      }
     },
     "terminal": {
       "line1": "Trénování vlastního modelu na obchodních datech...",
@@ -233,7 +344,10 @@
       "btn": "Odeslat zprávu",
       "success": "Zpráva byla úspěšně odeslána! Brzy se vám ozvu.",
       "error": "Něco se nepovedlo. Zkuste to prosím znovu nebo mi napište přímo."
-    }
+    },
+    "emailLabel": "E-mail",
+    "phoneLabel": "Telefon",
+    "businessLabel": "Firemní identifikace"
   },
   "projectDetail": {
     "back": "Zpět",
@@ -244,7 +358,9 @@
     "process": "Proces",
     "decisions": "Designová rozhodnutí",
     "setup": "Technické nastavení",
-    "gallery": "Galerie projektu"
+    "gallery": "Galerie projektu",
+    "notFoundTitle": "Projekt nebyl nalezen",
+    "notFoundBack": "Zpět na domů"
   },
   "error404": {
     "title": "Ztraceni v prostoru",
@@ -254,17 +370,35 @@
   "projectData": {
     "matrace-letovice": {
       "title": "Matrace Letovice",
-      "category": "Produktový katalog",
+      "category": "Tvorba webu",
       "desc": "Vlastní produktový katalog pro prémiového výrobce matrací.",
       "fullDesc": "Tento projekt zahrnoval vytvoření robustního digitálního katalogu pro špičkového výrobce matrací. Cílem bylo nahradit tradiční offline katalog moderním, vysoce výkonným webovým řešením, které zákazníkům umožní prozkoumat produkty do detailu. Postaveno na WordPressu pro snadnou správu obsahu klientem, ale optimalizováno vlastními úpravami frontend pro prémiový pocit.",
       "clientGoal": "Prezentovat prémiové matrace v profesionálním digitálním katalogu pro budování autority značky a nahradit zastaralé papírové brožury vyhledatelným, špičkovým online zážitkem.",
       "process": [
-        { "title": "Průzkum", "desc": "Analýza textur materiálů a USP produktů." },
-        { "title": "Wireframing", "desc": "Strukturování katalogu pro snadnou navigaci." },
-        { "title": "Design", "desc": "Vytvoření vizuálního systému odrážejícího pohodlí a kvalitu." },
-        { "title": "Nastavení WP", "desc": "Implementace vyladěného prostředí WordPress." },
-        { "title": "Customizace", "desc": "Stavba unikátních šablon detailů produktů." },
-        { "title": "Optimalizace", "desc": "SEO a ladění výkonu pro okamžité načítání." }
+        {
+          "title": "Průzkum",
+          "desc": "Analýza textur materiálů a USP produktů."
+        },
+        {
+          "title": "Wireframing",
+          "desc": "Strukturování katalogu pro snadnou navigaci."
+        },
+        {
+          "title": "Design",
+          "desc": "Vytvoření vizuálního systému odrážejícího pohodlí a kvalitu."
+        },
+        {
+          "title": "Nastavení WP",
+          "desc": "Implementace vyladěného prostředí WordPress."
+        },
+        {
+          "title": "Customizace",
+          "desc": "Stavba unikátních šablon detailů produktů."
+        },
+        {
+          "title": "Optimalizace",
+          "desc": "SEO a ladění výkonu pro okamžité načítání."
+        }
       ],
       "designDecisions": [
         "Velké, vysoce kvalitní snímky pro zdůraznění kvality materiálu.",
@@ -287,12 +421,30 @@
       "fullDesc": "Jakub Hes vyžadoval minimalistický, ale působivý digitální domov pro svou copywritingovou a vizuální práci. Projekt se zaměřil na 'bílý prostor' a typografii, aby nechala vyniknout samotnou kreativní práci. Implementovali jsme hladké přechody stránek a vlastní strukturu CMS, která Jakubovi umožňuje bezproblémově aktualizovat své portfolio.",
       "clientGoal": "Vytvořit digitální domov, který zvýrazní kreativní texty a vizuální projekty a zároveň vytvoří profesionální důvěryhodnost pro špičkové klienty v oblasti copywritingu.",
       "process": [
-        { "title": "Workshop", "desc": "Definování kreativního směru a hlasu." },
-        { "title": "Text-First", "desc": "Strukturování wireframů kolem textu." },
-        { "title": "Minimalismus", "desc": "Odstranění šumu, aby práce mluvila sama za sebe." },
-        { "title": "Vlastní téma", "desc": "Stavba lehké logiky WordPress." },
-        { "title": "Ladění CMS", "desc": "Přizpůsobení administrace pro snadné aktualizace." },
-        { "title": "Finální lesk", "desc": "Přidání jemných, špičkových animací." }
+        {
+          "title": "Workshop",
+          "desc": "Definování kreativního směru a hlasu."
+        },
+        {
+          "title": "Text-First",
+          "desc": "Strukturování wireframů kolem textu."
+        },
+        {
+          "title": "Minimalismus",
+          "desc": "Odstranění šumu, aby práce mluvila sama za sebe."
+        },
+        {
+          "title": "Vlastní téma",
+          "desc": "Stavba lehké logiky WordPress."
+        },
+        {
+          "title": "Ladění CMS",
+          "desc": "Přizpůsobení administrace pro snadné aktualizace."
+        },
+        {
+          "title": "Finální lesk",
+          "desc": "Přidání jemných, špičkových animací."
+        }
       ],
       "designDecisions": [
         "Minimalistické rozvržení pro zamezení vizuálního rozptylování od textu.",
@@ -310,17 +462,35 @@
     },
     "imphreco": {
       "title": "Imphreco",
-      "category": "Web Design",
+      "category": "Tvorba webu",
       "desc": "Inovativní digitální branding a design rozhraní.",
       "fullDesc": "Imphreco je projekt na špičce digitálního brandingu. Zaměření bylo na vytvoření vizuální identity, která působí futuristicky a technologicky vyspěle. Vyvinuli jsme sérii interaktivních komponent a unikátní navigační systém, který odráží inovativní přístup značky k jejímu odvětví.",
       "clientGoal": "Vybudovat inovativní a technologicky vyspělou digitální identitu značky, která vynikne na přeplněném trhu a okamžitě vybuduje důvěru u technologických klientů.",
       "process": [
-        { "title": "Průzkum", "desc": "Vizuální analýza odvětví a konkurence." },
-        { "title": "Interaktivita", "desc": "Prototypování unikátních uživatelských toků." },
-        { "title": "UI Design", "desc": "Vytvoření vysoce věrného vizuálního systému." },
-        { "title": "Architektura", "desc": "Nastavení škálovatelného prostředí React." },
-        { "title": "Animace", "desc": "Implementace logiky Framer Motion." },
-        { "title": "Stress-Test", "desc": "Finální testování výkonu a zařízení." }
+        {
+          "title": "Průzkum",
+          "desc": "Vizuální analýza odvětví a konkurence."
+        },
+        {
+          "title": "Interaktivita",
+          "desc": "Prototypování unikátních uživatelských toků."
+        },
+        {
+          "title": "UI Design",
+          "desc": "Vytvoření vysoce věrného vizuálního systému."
+        },
+        {
+          "title": "Architektura",
+          "desc": "Nastavení škálovatelného prostředí React."
+        },
+        {
+          "title": "Animace",
+          "desc": "Implementace logiky Framer Motion."
+        },
+        {
+          "title": "Stress-Test",
+          "desc": "Finální testování výkonu a zařízení."
+        }
       ],
       "designDecisions": [
         "Futuristická estetika s vibrujícími zářícími akcenty.",
@@ -343,12 +513,30 @@
       "fullDesc": "Dedikovaný projekt zaměřený na špičkovou portrétní fotografii pro Veroniku Kavanovou. Cílem bylo zachytit osobnost skrze světlo a stín, což vyústilo v sérii silných, vyprávěcích snímků použitých pro profesionální branding a osobní sbírky.",
       "clientGoal": "Zachytit profesionální a rozmanitou sadu portrétů, které komunikují osobnost i profesionalitu pro osobní branding.",
       "process": [
-        { "title": "Koncept", "desc": "Definování nálady a stylu osvětlení." },
-        { "title": "Scouting", "desc": "Výběr lokací odpovídajících vizi." },
-        { "title": "Focení", "desc": "Realizace sezení s Nikonem řady Z." },
-        { "title": "Výběr", "desc": "Kurátorství nejpůsobivějších snímků." },
-        { "title": "Grading", "desc": "Aplikace vlastních filmových barevných palet." },
-        { "title": "Retuš", "desc": "Doladění detailů pro dokonalý výsledek." }
+        {
+          "title": "Koncept",
+          "desc": "Definování nálady a stylu osvětlení."
+        },
+        {
+          "title": "Scouting",
+          "desc": "Výběr lokací odpovídajících vizi."
+        },
+        {
+          "title": "Focení",
+          "desc": "Realizace sezení s Nikonem řady Z."
+        },
+        {
+          "title": "Výběr",
+          "desc": "Kurátorství nejpůsobivějších snímků."
+        },
+        {
+          "title": "Grading",
+          "desc": "Aplikace vlastních filmových barevných palet."
+        },
+        {
+          "title": "Retuš",
+          "desc": "Doladění detailů pro dokonalý výsledek."
+        }
       ],
       "designDecisions": [
         "Filmové svícení pro vytvoření hloubky a dramatu.",
@@ -371,12 +559,30 @@
       "fullDesc": "Sbírka komerčních produktových focení, zvýrazněná projektem 'Samolepící výztužná páska'. Tato focení vyžadují extrémní pozornost k detailu, textuře a technickému osvětlení pro prezentaci produktů v nejlepším možném světle pro e-commerce a katalogy.",
       "clientGoal": "Zvýraznit textury produktů a technické detaily pro zvýšení důvěry zákazníků a podporu prodeje v katalogovém prostředí.",
       "process": [
-        { "title": "Technika", "desc": "Pochopení vlastností materiálů produktu." },
-        { "title": "Nastavení", "desc": "Konfigurace studiového makro osvětlení." },
-        { "title": "Makro", "desc": "Zachycení extrémních detailů a textur." },
-        { "title": "Více úhlů", "desc": "Zobrazení produktu ze všech relevantních stran." },
-        { "title": "Čištění", "desc": "Odstranění nedokonalostí v postprodukci." },
-        { "title": "Export", "desc": "Optimalizace pro výkon v e-commerce." }
+        {
+          "title": "Technika",
+          "desc": "Pochopení vlastností materiálů produktu."
+        },
+        {
+          "title": "Nastavení",
+          "desc": "Konfigurace studiového makro osvětlení."
+        },
+        {
+          "title": "Makro",
+          "desc": "Zachycení extrémních detailů a textur."
+        },
+        {
+          "title": "Více úhlů",
+          "desc": "Zobrazení produktu ze všech relevantních stran."
+        },
+        {
+          "title": "Čištění",
+          "desc": "Odstranění nedokonalostí v postprodukci."
+        },
+        {
+          "title": "Export",
+          "desc": "Optimalizace pro výkon v e-commerce."
+        }
       ],
       "designDecisions": [
         "Ostré zaostření v celé rovině produktu.",
@@ -399,12 +605,30 @@
       "fullDesc": "Wildlife Hub je probíhající vášnivý projekt věnovaný zachycení syrové krásy přírodního světa. Od ptáků v letu po makro fotografii hmyzu, tento projekt posouvá hranice trpělivosti a technických dovedností v terénu.",
       "clientGoal": "Zachytit nearanžovanou, syrovou krásu přírody, která inspiruje k ochraně a ocenění přírodního světa.",
       "process": [
-        { "title": "Plánování", "desc": "Studium chování zvířat a jejich biotopů." },
-        { "title": "Terén", "desc": "Trávení hodin v pozici pro dokonalý záběr." },
-        { "title": "Záběr", "desc": "Vysokorychlostní sledování akčních momentů." },
-        { "title": "Autenticita", "desc": "Prioritizace přirozených momentů před aranžovanými." },
-        { "title": "Atmosféra", "desc": "Vylepšení přirozeného světla v postprodukci." },
-        { "title": "Archiv", "desc": "Budování prohledávatelné databáze divoké zvěře." }
+        {
+          "title": "Plánování",
+          "desc": "Studium chování zvířat a jejich biotopů."
+        },
+        {
+          "title": "Terén",
+          "desc": "Trávení hodin v pozici pro dokonalý záběr."
+        },
+        {
+          "title": "Záběr",
+          "desc": "Vysokorychlostní sledování akčních momentů."
+        },
+        {
+          "title": "Autenticita",
+          "desc": "Prioritizace přirozených momentů před aranžovanými."
+        },
+        {
+          "title": "Atmosféra",
+          "desc": "Vylepšení přirozeného světla v postprodukci."
+        },
+        {
+          "title": "Archiv",
+          "desc": "Budování prohledávatelné databáze divoké zvěře."
+        }
       ],
       "designDecisions": [
         "Široké kompozice pro zobrazení kontextu biotopu.",
@@ -419,6 +643,41 @@
         "Makro objektiv",
         "Adobe Lightroom"
       ]
+    }
+  },
+  "common": {
+    "all": "Vše"
+  },
+  "links": {
+    "role": "Digitální tvůrce a vývojář"
+  },
+  "worksPage": {
+    "eyebrow": "Archiv",
+    "titleLead": "Všechny",
+    "titleAccent": "projekty",
+    "description": "Kompletní kolekce mé práce napříč vývojem, designem a vizuálním storytellingem.",
+    "filters": {
+      "all": "Vše",
+      "webCreation": "Tvorba webu",
+      "photography": "Fotografie"
+    },
+    "emptyTitle": "V této kategorii nebyly nalezeny žádné projekty",
+    "emptyAction": "Zobrazit vše",
+    "ctaTitle": "Váš projekt může být další.",
+    "ctaDesc": "Jste připraveni vytvořit něco špičkového? Pojďme probrat vaši vizi a proměnit ji ve výkonné digitální řešení.",
+    "ctaButton": "Začít konverzaci"
+  },
+  "galleryPage": {
+    "eyebrow": "Vizuální archiv",
+    "titleLead": "Celá",
+    "titleAccent": "kolekce",
+    "categories": {
+      "all": "Vše",
+      "wildlife": "Divoká příroda",
+      "portraits": "Portréty",
+      "commercial": "Komerce",
+      "lifestyle": "Lifestyle",
+      "pets": "Mazlíčci"
     }
   }
 }

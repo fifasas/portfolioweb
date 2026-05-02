@@ -225,7 +225,7 @@ const WebCreation = () => {
               </div>
               <div className="flex-1 space-y-6 text-left">
                 <div className="flex gap-3">
-                  {["Wordpress", "catalog"].map(tag => (
+                  {p.tags.map(tag => (
                     <span key={tag} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest text-primary font-bold">
                       {tag}
                     </span>
@@ -257,10 +257,10 @@ const WebCreation = () => {
           <div className="relative z-10">
             <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tighter uppercase">{t('webCreation.ownership.full.btn').toUpperCase()}?</h2>
             <p className="text-white/80 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-              Stop guessing and start building. Let's create a digital experience that actually works for your business.
+              {t('webCreation.finalCta.subtitle')}
             </p>
             <Link to="/contact" className="px-12 py-6 bg-white text-primary font-black rounded-full hover:bg-gray-100 transition-all inline-flex items-center gap-3 shadow-2xl">
-              Get Started <Zap size={20} fill="currentColor" />
+              {t('webCreation.finalCta.button')} <Zap size={20} fill="currentColor" />
             </Link>
           </div>
           <Globe className="absolute -right-20 -bottom-20 w-96 h-96 text-white/10" />

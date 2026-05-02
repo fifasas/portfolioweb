@@ -3,12 +3,14 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Code, Camera, Brain, Send, Home, Megaphone, Globe } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useLanguageTransition } from '../contexts/LanguageTransitionContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const { t, i18n } = useTranslation();
+  const { startLanguageTransition, finishLanguageTransition } = useLanguageTransition();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,11 +26,11 @@ const Navbar = () => {
       return;
     }
 
-    window.dispatchEvent(new CustomEvent('app-language-switch-start'));
+    startLanguageTransition();
     try {
       await i18n.changeLanguage(lng);
     } finally {
-      window.dispatchEvent(new CustomEvent('app-language-switch-finish'));
+      finishLanguageTransition();
       setIsOpen(false);
     }
   };

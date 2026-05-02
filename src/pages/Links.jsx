@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Linkedin, Instagram, Youtube, Globe, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { siteContact, siteProfile, siteSocialLinks } from '../data/site';
 
 const Links = () => {
   const { t } = useTranslation();
@@ -10,10 +11,11 @@ const Links = () => {
   const links = [
     { name: t('nav.home'), url: "/", icon: <Globe size={20} /> },
     { name: t('nav.photography'), url: "/photography", icon: <Globe size={20} /> },
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/filip-ln%C4%9Bni%C4%8Dka-724a0127b/", icon: <Linkedin size={20} /> },
-    { name: "Instagram", url: "https://www.instagram.com/filiplnenicka/", icon: <Instagram size={20} /> },
-    { name: "YouTube", url: "https://www.youtube.com/@filiplnenicka", icon: <Youtube size={20} /> },
+    { name: "LinkedIn", url: siteSocialLinks.linkedin, icon: <Linkedin size={20} /> },
+    { name: "Instagram", url: siteSocialLinks.instagram, icon: <Instagram size={20} /> },
+    { name: "YouTube", url: siteSocialLinks.youtube, icon: <Youtube size={20} /> },
     { name: t('nav.contact'), url: "/contact", icon: <Mail size={20} /> },
+    { name: siteContact.email, url: siteContact.emailHref, icon: <Mail size={20} /> },
   ];
 
   return (
@@ -28,8 +30,8 @@ const Links = () => {
         className="z-10 text-center mb-8"
       >
         <img src="/images/profile.jpg" alt="Filip Lněnička" className="w-24 h-24 rounded-full border-4 border-white/10 mx-auto mb-4 object-cover" />
-        <h1 className="text-2xl font-bold">Filip Lněnička</h1>
-        <p className="text-gray-400">Digital Creator & Developer</p>
+        <h1 className="text-2xl font-bold">{siteProfile.name}</h1>
+        <p className="text-gray-400">{t(siteProfile.roleKey)}</p>
       </motion.div>
 
       <div className="w-full max-w-md z-10 space-y-4">

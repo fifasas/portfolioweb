@@ -8,6 +8,7 @@ import {
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
+import { projects as projectEntries } from '../data/projects';
 
 const CircularGallery = React.lazy(() => import('../components/CircularGallery'));
 const MotionCarousel = React.lazy(() => import('../components/MotionCarousel'));
@@ -42,15 +43,6 @@ const FAQItem = ({ question, answer }) => {
   );
 };
 
-const projects = [
-  { id: "matrace-letovice", title: "Matrace Letovice", category: "Product Catalog", desc: "A custom product catalog for a premium mattress manufacturer.", image: "/images/gallery/MatraceLetoviceMockup-scaled.webp", color: "from-blue-600 to-cyan-400" },
-  { id: "jakub-hes", title: "Jakub Hes", category: "Web Creation", desc: "Professional portfolio and branding for a visual artist.", image: "/images/gallery/JakubHesMockUpt-scaled.webp", color: "from-purple-600 to-pink-400" },
-  { id: "imphreco", title: "Imphreco", category: "Web Creation", desc: "Innovative digital branding and interface design.", image: "/images/projects/imphreco/logo.png", isLogo: true, color: "from-emerald-600 to-teal-400" },
-  { id: "veronika-kavanova", title: "Veronika Kavanová", category: "Photography", desc: "Professional portrait and action capture.", image: "/images/gallery/veronica.webp", color: "from-yellow-600 to-amber-400" },
-  { id: "product-photoshooting", title: "Product Photoshooting", category: "Photography", desc: "Commercial and detailed product imagery.", image: "/images/gallery/paska.jpg", color: "from-yellow-600 to-amber-400" },
-  { id: "wildlife-hub", title: "Wildlife Hub", category: "Photography", desc: "Interactive gallery for nature enthusiasts.", image: "/images/gallery/bird.webp", color: "from-yellow-600 to-amber-400" },
-];
-
 let hasPlayedHomeIntro = false;
 
 const Home = ({ isRevealed, preloadReady = false }) => {
@@ -60,7 +52,7 @@ const Home = ({ isRevealed, preloadReady = false }) => {
   const mousePos = useRef({ x: 0, y: 0 });
   const currentPos = useRef({ x: 0, y: 0 });
   const [animateHeroOnce] = useState(() => !hasPlayedHomeIntro);
-  const [loadHeavySections, setLoadHeavySections] = useState(false);
+  const [loadHeavySections, setLoadHeavySections] = useState(() => Boolean(preloadReady));
   const shouldAnimateHero = isRevealed && animateHeroOnce;
 
   const bentoItems = [
@@ -129,6 +121,7 @@ const Home = ({ isRevealed, preloadReady = false }) => {
   ];
 
   const testimonials = t('testimonials.reviews', { returnObjects: true });
+  const faqItems = t('faq.items', { returnObjects: true });
 
   useEffect(() => {
     if (isRevealed && animateHeroOnce && !hasPlayedHomeIntro) {
@@ -138,7 +131,6 @@ const Home = ({ isRevealed, preloadReady = false }) => {
 
   useEffect(() => {
     if (preloadReady) {
-      setLoadHeavySections(true);
       return undefined;
     }
 
@@ -161,6 +153,13 @@ const Home = ({ isRevealed, preloadReady = false }) => {
       }
     };
   }, [preloadReady]);
+
+  const featuredProjects = projectEntries.map((project) => ({
+    ...project,
+    categoryLabel: project.category === 'Photography' ? t('nav.photography') : t('nav.webCreation'),
+    title: t(`projectData.${project.id}.title`),
+    desc: t(`projectData.${project.id}.desc`),
+  }));
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -317,7 +316,7 @@ const Home = ({ isRevealed, preloadReady = false }) => {
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {projects.map((project, i) => (
+          {featuredProjects.map((project, i) => (
             <Link to={`/project/${project.id}`} key={i} className="block group">
               <motion.div
                 whileHover={{ y: -10 }}
@@ -336,7 +335,7 @@ const Home = ({ isRevealed, preloadReady = false }) => {
                 )}
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
                 <div className="absolute inset-0 p-8 flex flex-col justify-end text-left">
-                  <div className="text-xs font-bold uppercase tracking-widest text-primary mb-2">{project.category}</div>
+                  <div className="text-xs font-bold uppercase tracking-widest text-primary mb-2">{project.categoryLabel}</div>
                   <h4 className="text-3xl font-bold mb-2">{project.title}</h4>
                   <p className="text-gray-400 text-sm mb-6">{project.desc}</p>
                   <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white text-white group-hover:text-black transition-colors">
@@ -415,30 +414,13 @@ const Home = ({ isRevealed, preloadReady = false }) => {
         <div className="max-w-3xl mx-auto">
           <h3 className="text-4xl font-bold mb-12 text-center uppercase tracking-tighter">{t('faq.title')}</h3>
           <div className="space-y-2">
-            <FAQItem 
-              question="Who do you usually work with?" 
-              answer="I mainly work with service businesses, creators, and growing brands that want performance-focused websites and smart automation — not just visual redesigns."
-            />
-            <FAQItem 
-              question="What do you need from me to start a project?" 
-              answer="Basic goals, target audience, existing materials (if any), and a short kickoff call. I guide the rest of the process step by step."
-            />
-            <FAQItem 
-              question="How do you integrate AI into web projects?" 
-              answer="I use AI for everything from intelligent content generation and personalized user experiences to backend automation and data analysis. Each project gets a custom AI strategy."
-            />
-            <FAQItem 
-              question="Do you take international projects?" 
-              answer="Yes, I work with clients worldwide. My workflow is fully optimized for remote collaboration, ensuring seamless communication across time zones."
-            />
-            <FAQItem 
-              question="What is your typical project timeline?" 
-              answer="Timelines vary by complexity. A high-performance landing page usually takes 1-2 weeks, while complex full-stack applications or full brand revamps can take 4-8 weeks."
-            />
-            <FAQItem 
-              question="Can you work with my existing website or stack?" 
-              answer="In many cases yes. I can extend, optimize or rebuild existing systems depending on their condition and goals."
-            />
+            {faqItems.map((item) => (
+              <FAQItem
+                key={item.question}
+                question={item.question}
+                answer={item.answer}
+              />
+            ))}
           </div>
         </div>
       </section>

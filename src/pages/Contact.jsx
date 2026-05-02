@@ -1,8 +1,9 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Phone, ShieldCheck, Send, CheckCircle2, AlertCircle, Linkedin, Instagram, Youtube } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
+import { siteContact, siteSocialLinks } from '../data/site';
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -69,8 +70,10 @@ const Contact = () => {
                   <Mail size={24} />
                 </div>
                 <div>
-                  <div className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Email</div>
-                  <div className="text-lg font-bold">filip.lnenicka@filiplnenicka.cz</div>
+                  <div className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">{t('contact.emailLabel')}</div>
+                  <a href={siteContact.emailHref} className="text-lg font-bold transition-colors hover:text-white">
+                    {siteContact.email}
+                  </a>
                 </div>
               </div>
               
@@ -79,21 +82,23 @@ const Contact = () => {
                   <Phone size={24} />
                 </div>
                 <div>
-                  <div className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Phone</div>
-                  <div className="text-lg font-bold">+420 777 867 380</div>
+                  <div className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">{t('contact.phoneLabel')}</div>
+                  <a href={siteContact.phoneHref} className="text-lg font-bold transition-colors hover:text-white">
+                    {siteContact.phone}
+                  </a>
                 </div>
               </div>
 
               <div className="pt-8 border-t border-white/5 space-y-6">
                 <div className="text-[10px] text-gray-500 uppercase tracking-[0.3em] font-bold">{t('contact.follow')}</div>
                 <div className="flex gap-4">
-                  <a href="https://www.linkedin.com/in/filip-ln%C4%9Bni%C4%8Dka-724a0127b/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:border-primary transition-all">
+                  <a href={siteSocialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:border-primary transition-all">
                     <Linkedin size={20} />
                   </a>
-                  <a href="https://www.instagram.com/filiplnenicka/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:border-primary transition-all">
+                  <a href={siteSocialLinks.instagram} target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:border-primary transition-all">
                     <Instagram size={20} />
                   </a>
-                  <a href="https://www.youtube.com/@filiplnenicka" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:border-primary transition-all">
+                  <a href={siteSocialLinks.youtube} target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:border-primary transition-all">
                     <Youtube size={20} />
                   </a>
                 </div>
@@ -104,8 +109,8 @@ const Contact = () => {
                   <ShieldCheck size={24} />
                 </div>
                 <div>
-                  <div className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Business Registration</div>
-                  <div className="text-lg font-bold">IČO: 22028081</div>
+                  <div className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">{t('contact.businessLabel')}</div>
+                  <div className="text-lg font-bold">IČO: {siteContact.businessId}</div>
                 </div>
               </div>
             </div>

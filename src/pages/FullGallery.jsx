@@ -75,11 +75,26 @@ const FullGallery = () => {
     { src: '/images/gallery/THIS IS MAX.webp', category: 'Pets' }
   ];
 
-  const categories = ['All', 'Wildlife', 'Portraits', 'Commercial', 'Lifestyle', 'Pets'];
+  const categories = [
+    { key: 'all', value: 'All', label: t('galleryPage.categories.all') },
+    { key: 'wildlife', value: 'Wildlife', label: t('galleryPage.categories.wildlife') },
+    { key: 'portraits', value: 'Portraits', label: t('galleryPage.categories.portraits') },
+    { key: 'commercial', value: 'Commercial', label: t('galleryPage.categories.commercial') },
+    { key: 'lifestyle', value: 'Lifestyle', label: t('galleryPage.categories.lifestyle') },
+    { key: 'pets', value: 'Pets', label: t('galleryPage.categories.pets') },
+  ];
 
   const filteredImages = filter === 'All' 
     ? galleryImages 
     : galleryImages.filter(img => img.category === filter);
+
+  const categoryLabels = {
+    Wildlife: t('galleryPage.categories.wildlife'),
+    Portraits: t('galleryPage.categories.portraits'),
+    Commercial: t('galleryPage.categories.commercial'),
+    Lifestyle: t('galleryPage.categories.lifestyle'),
+    Pets: t('galleryPage.categories.pets'),
+  };
 
   // Lock body scroll
   React.useEffect(() => {
@@ -101,9 +116,9 @@ const FullGallery = () => {
           animate={{ opacity: 1, y: 0 }}
           className="max-w-4xl"
         >
-          <span className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Visual Archive</span>
+          <span className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 block">{t('galleryPage.eyebrow')}</span>
           <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter uppercase leading-none">
-            The Full <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Collection</span>
+            {t('galleryPage.titleLead')} <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">{t('galleryPage.titleAccent')}</span>
           </h1>
         </motion.div>
       </section>
@@ -113,15 +128,15 @@ const FullGallery = () => {
         <div className="flex gap-4 min-w-max pb-4">
           {categories.map((cat) => (
             <button
-              key={cat}
-              onClick={() => setFilter(cat)}
+              key={cat.key}
+              onClick={() => setFilter(cat.value)}
               className={`px-8 py-3 rounded-full text-sm font-bold transition-all border ${
-                filter === cat 
+                filter === cat.value 
                   ? 'bg-white text-black border-white' 
                   : 'bg-white/5 text-gray-400 border-white/10 hover:border-white/30'
               }`}
             >
-              {cat === 'All' ? t('nav.home').replace('Home', 'All') : cat}
+              {cat.label}
             </button>
           ))}
         </div>
@@ -156,7 +171,7 @@ const FullGallery = () => {
                 </div>
                 <div className="absolute top-4 left-4">
                   <span className="px-3 py-1 bg-black/60 backdrop-blur-md rounded-full text-[9px] font-bold uppercase tracking-widest text-primary border border-white/10">
-                    {img.category}
+                    {categoryLabels[img.category] ?? img.category}
                   </span>
                 </div>
               </motion.div>

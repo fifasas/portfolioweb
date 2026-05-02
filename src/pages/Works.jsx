@@ -9,7 +9,11 @@ const Works = () => {
   const { t } = useTranslation();
   const [filter, setFilter] = useState('All');
 
-  const categories = ['All', 'Web Creation', 'Photography'];
+  const categories = [
+    { key: 'all', value: 'All', label: t('worksPage.filters.all') },
+    { key: 'webCreation', value: 'Web Creation', label: t('worksPage.filters.webCreation') },
+    { key: 'photography', value: 'Photography', label: t('worksPage.filters.photography') },
+  ];
 
   const filteredProjects = filter === 'All' 
     ? projects 
@@ -24,12 +28,12 @@ const Works = () => {
           animate={{ opacity: 1, y: 0 }}
           className="max-w-4xl mx-auto"
         >
-          <span className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Archive</span>
+          <span className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 block">{t('worksPage.eyebrow')}</span>
           <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter uppercase">
-            All <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Projects</span>
+            {t('worksPage.titleLead')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">{t('worksPage.titleAccent')}</span>
           </h1>
           <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-            A comprehensive collection of my work across development, design, and visual storytelling.
+            {t('worksPage.description')}
           </p>
         </motion.div>
       </section>
@@ -39,15 +43,15 @@ const Works = () => {
         <div className="flex flex-wrap justify-center gap-4">
           {categories.map((cat) => (
             <button
-              key={cat}
-              onClick={() => setFilter(cat)}
+              key={cat.key}
+              onClick={() => setFilter(cat.value)}
               className={`px-8 py-3 rounded-full text-sm font-bold transition-all border ${
-                filter === cat 
+                filter === cat.value 
                   ? 'bg-white text-black border-white shadow-xl shadow-white/10' 
                   : 'bg-white/5 text-gray-400 border-white/10 hover:border-white/30 hover:text-white'
               }`}
             >
-              {cat === 'All' ? t('nav.home').replace('Home', 'All') : cat}
+              {cat.label}
             </button>
           ))}
         </div>
@@ -113,8 +117,8 @@ const Works = () => {
       {filteredProjects.length === 0 && (
         <div className="text-center py-40">
           <Zap className="mx-auto text-primary/20 mb-6" size={60} />
-          <h3 className="text-2xl font-bold">No projects found in this category</h3>
-          <button onClick={() => setFilter('All')} className="mt-4 text-primary hover:underline">Show all projects</button>
+          <h3 className="text-2xl font-bold">{t('worksPage.emptyTitle')}</h3>
+          <button onClick={() => setFilter('All')} className="mt-4 text-primary hover:underline">{t('worksPage.emptyAction')}</button>
         </div>
       )}
 
@@ -126,12 +130,12 @@ const Works = () => {
           viewport={{ once: true }}
           className="p-12 md:p-24 rounded-[3rem] bg-white/5 border border-white/10 text-center relative overflow-hidden backdrop-blur-xl"
         >
-          <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tighter uppercase">Your project could be next.</h2>
+          <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tighter uppercase">{t('worksPage.ctaTitle')}</h2>
           <p className="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-            Ready to build something world-class? Let's discuss your vision and turn it into a high-performance reality.
+            {t('worksPage.ctaDesc')}
           </p>
           <Link to="/contact" className="px-12 py-6 bg-white text-black font-black rounded-full hover:bg-primary hover:text-white transition-all transform hover:scale-105 inline-block shadow-2xl">
-            Start a Conversation
+            {t('worksPage.ctaButton')}
           </Link>
         </motion.div>
       </section>

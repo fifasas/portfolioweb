@@ -51,7 +51,7 @@ const MotionCarousel = ({ reviews = [] }) => {
                 <Quote className="text-primary opacity-40 mb-10 animate-pulse" size={40} />
                 
                 <h3 className="text-2xl md:text-4xl font-bold leading-tight tracking-tight mb-16 text-white max-w-3xl">
-                  "{review.text}"
+                  <span>&ldquo;{review.text}&rdquo;</span>
                 </h3>
 
                 <div className="flex flex-col items-center group">

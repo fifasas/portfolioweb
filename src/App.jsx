@@ -4,6 +4,7 @@ import Layout from './layouts/Layout';
 import LoadingScreen from './components/LoadingScreen';
 import GravityStars from './components/GravityStars';
 import { AnimatePresence } from 'framer-motion';
+import { LanguageTransitionProvider } from './contexts/LanguageTransitionContext';
 
 const Home = React.lazy(() => import('./pages/Home'));
 const WebCreation = React.lazy(() => import('./pages/WebCreation'));
@@ -38,31 +39,28 @@ function App() {
   const location = useLocation();
   const isLinktree = location.pathname === '/links';
 
-  React.useEffect(() => {
+  const startLanguageTransition = React.useCallback(() => {
+    if (languageExitTimerRef.current) {
+      window.clearTimeout(languageExitTimerRef.current);
+    }
+
+    languageSwitchStartRef.current = performance.now();
+    setIsLanguageSwitching(true);
+    setCanExitLanguageLoader(false);
+  }, []);
+
+  const finishLanguageTransition = React.useCallback(() => {
     const MIN_LANGUAGE_LOADER_MS = 260;
+    const elapsed = performance.now() - languageSwitchStartRef.current;
+    const remaining = Math.max(0, MIN_LANGUAGE_LOADER_MS - elapsed);
 
-    const handleLanguageSwitchStart = () => {
-      if (languageExitTimerRef.current) {
-        window.clearTimeout(languageExitTimerRef.current);
-      }
-      languageSwitchStartRef.current = performance.now();
-      setIsLanguageSwitching(true);
-      setCanExitLanguageLoader(false);
-    };
+    languageExitTimerRef.current = window.setTimeout(() => {
+      setCanExitLanguageLoader(true);
+    }, remaining);
+  }, []);
 
-    const handleLanguageSwitchFinish = () => {
-      const elapsed = performance.now() - languageSwitchStartRef.current;
-      const remaining = Math.max(0, MIN_LANGUAGE_LOADER_MS - elapsed);
-      languageExitTimerRef.current = window.setTimeout(() => {
-        setCanExitLanguageLoader(true);
-      }, remaining);
-    };
-
-    window.addEventListener('app-language-switch-start', handleLanguageSwitchStart);
-    window.addEventListener('app-language-switch-finish', handleLanguageSwitchFinish);
+  React.useEffect(() => {
     return () => {
-      window.removeEventListener('app-language-switch-start', handleLanguageSwitchStart);
-      window.removeEventListener('app-language-switch-finish', handleLanguageSwitchFinish);
       if (languageExitTimerRef.current) {
         window.clearTimeout(languageExitTimerRef.current);
       }
@@ -105,39 +103,16 @@ function App() {
         }
       });
 
-    const waitForWindowLoad = new Promise((resolve) => {
-      if (document.readyState === 'complete') {
-        resolve();
-        return;
-      }
-      window.addEventListener('load', resolve, { once: true });
-    });
-
     const preloadCriticalChunks = Promise.all([
       import('./pages/Home'),
-      import('./components/CircularGallery'),
-      import('./components/MagicBento'),
-      import('./components/MotionCarousel'),
     ]);
 
     const preloadCriticalImages = Promise.all([
       preloadImage('/images/logo_white.png'),
       preloadImage('/images/profile.jpg'),
-      preloadImage('/images/gallery/MatraceLetoviceMockup-scaled.webp'),
-      preloadImage('/images/gallery/JakubHesMockUpt-scaled.webp'),
-      preloadImage('/images/gallery/veronica.webp'),
-      preloadImage('/images/gallery/paska.jpg'),
-      preloadImage('/images/gallery/bird.webp'),
-      preloadImage('/images/gallery/Angry_cat.webp'),
-      preloadImage('/images/gallery/double_vasek.webp'),
-      preloadImage('/images/gallery/goose.webp'),
-      preloadImage('/images/gallery/mourek.webp'),
-      preloadImage('/images/gallery/richasti.webp'),
-      preloadImage('/images/gallery/THIS IS MAX.webp'),
-      preloadImage('/images/gallery/vasek_sax.webp'),
     ]);
 
-    Promise.all([waitForWindowLoad, preloadCriticalChunks, preloadCriticalImages]).then(() => {
+    Promise.all([preloadCriticalChunks, preloadCriticalImages]).then(() => {
       if (!cancelled) {
         setAppReady(true);
       }
@@ -176,6 +151,7 @@ function App() {
   );
 
   return (
+    <LanguageTransitionProvider value={{ startLanguageTransition, finishLanguageTransition }}>
     <>
       <ScrollToTop />
       {!isLinktree && (
@@ -212,6 +188,7 @@ function App() {
         {mainContent}
       </div>
     </>
+    </LanguageTransitionProvider>
   );
 }
 

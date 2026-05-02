@@ -10,7 +10,7 @@
   },
   "hero": {
     "title1": "FILIP",
-    "title2": "LNENICKA",
+    "title2": "LNĚNIČKA",
     "subtitle1": "I'm Filip Lněnička — a digital creator",
     "subtitle2": "passionately creating web experiences and",
     "subtitle3": "AI-driven solutions for modern businesses.",
@@ -104,7 +104,33 @@
     ]
   },
   "faq": {
-    "title": "Q&A"
+    "title": "Q&A",
+    "items": [
+      {
+        "question": "Who do you usually work with?",
+        "answer": "I mainly work with service businesses, creators, and growing brands that want performance-focused websites and smart automation — not just visual redesigns."
+      },
+      {
+        "question": "What do you need from me to start a project?",
+        "answer": "Basic goals, target audience, existing materials (if any), and a short kickoff call. I guide the rest of the process step by step."
+      },
+      {
+        "question": "How do you integrate AI into web projects?",
+        "answer": "I use AI for everything from intelligent content generation and personalized user experiences to backend automation and data analysis. Each project gets a custom AI strategy."
+      },
+      {
+        "question": "Do you take international projects?",
+        "answer": "Yes, I work with clients worldwide. My workflow is fully optimized for remote collaboration, ensuring seamless communication across time zones."
+      },
+      {
+        "question": "What is your typical project timeline?",
+        "answer": "Timelines vary by complexity. A high-performance landing page usually takes 1-2 weeks, while complex full-stack applications or full brand revamps can take 4-8 weeks."
+      },
+      {
+        "question": "Can you work with my existing website or stack?",
+        "answer": "In many cases yes. I can extend, optimize or rebuild existing systems depending on their condition and goals."
+      }
+    ]
   },
   "finalCta": {
     "title": "Let's build the future.",
@@ -141,12 +167,30 @@
     "projectTypes": "Project Types",
     "ownershipModels": "Ownership Models",
     "types": {
-      "static": { "title": "Static & Brand Sites", "desc": "High-performance landing pages and business portfolios optimized for speed and SEO." },
-      "ecommerce": { "title": "E-commerce Systems", "desc": "Custom online stores with product management, secure payments, and tracking." },
-      "apps": { "title": "Web Applications", "desc": "Interactive dashboards, customer portals, and internal tools with user authentication." },
-      "cms": { "title": "CMS & Content Hubs", "desc": "Scalable platforms for blogs, magazines, or news with easy content management." },
-      "booking": { "title": "Booking & Scheduling", "desc": "Integrated calendar systems for service businesses to handle appointments automatically." },
-      "ai": { "title": "AI-Powered Platforms", "desc": "Custom implementations of LLMs and generative AI tools built directly into your web interface." }
+      "static": {
+        "title": "Static & Brand Sites",
+        "desc": "High-performance landing pages and business portfolios optimized for speed and SEO."
+      },
+      "ecommerce": {
+        "title": "E-commerce Systems",
+        "desc": "Custom online stores with product management, secure payments, and tracking."
+      },
+      "apps": {
+        "title": "Web Applications",
+        "desc": "Interactive dashboards, customer portals, and internal tools with user authentication."
+      },
+      "cms": {
+        "title": "CMS & Content Hubs",
+        "desc": "Scalable platforms for blogs, magazines, or news with easy content management."
+      },
+      "booking": {
+        "title": "Booking & Scheduling",
+        "desc": "Integrated calendar systems for service businesses to handle appointments automatically."
+      },
+      "ai": {
+        "title": "AI-Powered Platforms",
+        "desc": "Custom implementations of LLMs and generative AI tools built directly into your web interface."
+      }
     },
     "ownership": {
       "full": {
@@ -161,6 +205,10 @@
         "label": "Scalable Service",
         "btn": "I Want to Rent"
       }
+    },
+    "finalCta": {
+      "subtitle": "Stop guessing and start building. Let's create a digital experience that actually works for your business.",
+      "button": "Get Started"
     }
   },
   "marketing": {
@@ -174,7 +222,57 @@
     "methodologyDesc": "Marketing isn't a guessing game. It's a system. I combine psychological insights with technical automation to ensure every euro spent works twice as hard.",
     "ctaTitle": "SCALE YOUR BRAND",
     "ctaSubtitle": "Ready to stop shouting into the void? Let's build a marketing system that actually generates results.",
-    "ctaBtn": "Book a Strategy Call"
+    "ctaBtn": "Book a Strategy Call",
+    "services": {
+      "audience": {
+        "title": "Audience & Funnel Strategy",
+        "desc": "Clarify who you want to reach, what they need to hear, and how to move them from first touch to inquiry."
+      },
+      "content": {
+        "title": "Content & Copywriting",
+        "desc": "High-conversion copy and storytelling that build authority while making your offer easier to understand."
+      },
+      "performance": {
+        "title": "Performance Marketing",
+        "desc": "Data-driven campaigns across search and social designed to maximize ROI and scale customer acquisition."
+      },
+      "brand": {
+        "title": "Brand Strategy",
+        "desc": "Positioning, messaging, and strategic clarity that help your brand stand out in crowded markets."
+      }
+    },
+    "methodFeatures": {
+      "automation": "AI Automation",
+      "analysis": "Data Analysis",
+      "human": "Human Centric",
+      "global": "Global Scale"
+    },
+    "process": [
+      {
+        "title": "Audit",
+        "desc": "Analyzing your current presence and competitors."
+      },
+      {
+        "title": "Strategy",
+        "desc": "Defining clear KPIs and a growth roadmap."
+      },
+      {
+        "title": "Creative",
+        "desc": "Developing high-impact visuals and copy assets."
+      },
+      {
+        "title": "Execution",
+        "desc": "Launching campaigns and content systems."
+      },
+      {
+        "title": "Analytics",
+        "desc": "Tracking performance and surfacing actionable insights."
+      },
+      {
+        "title": "Scale",
+        "desc": "Doubling down on what works and removing waste."
+      }
+    ]
   },
   "photography": {
     "heroTag": "Visual Storytelling",
@@ -191,7 +289,8 @@
     "kitTitle": "THE ARSENAL",
     "kitSubtitle": "Professional tools for high-end visual content creation.",
     "photography": "For Photography",
-    "videography": "For Videography"
+    "videography": "For Videography",
+    "loadMore": "Load More"
   },
   "ai": {
     "heroTag": "Intelligence at Scale",
@@ -206,10 +305,22 @@
     "ctaSubtitle": "Don't get left behind. Let's find the specific places where AI can give your business an unfair advantage.",
     "ctaBtn": "Start AI Implementation",
     "solutions": {
-      "chatbots": { "title": "Custom Chatbots", "desc": "Intelligent customer support and sales agents trained on your specific business data for 24/7 engagement." },
-      "workflow": { "title": "Workflow Automation", "desc": "Automating repetitive tasks by connecting AI models with your existing software stack to save hours of manual work." },
-      "analysis": { "title": "AI Data Analysis", "desc": "Extracting actionable insights from large datasets using LLMs to drive smarter business decisions." },
-      "gen": { "title": "Generative Systems", "desc": "Implementing text, image, and voice generation tools tailored to your brand's creative requirements." }
+      "chatbots": {
+        "title": "Custom Chatbots",
+        "desc": "Intelligent customer support and sales agents trained on your specific business data for 24/7 engagement."
+      },
+      "workflow": {
+        "title": "Workflow Automation",
+        "desc": "Automating repetitive tasks by connecting AI models with your existing software stack to save hours of manual work."
+      },
+      "analysis": {
+        "title": "AI Data Analysis",
+        "desc": "Extracting actionable insights from large datasets using LLMs to drive smarter business decisions."
+      },
+      "gen": {
+        "title": "Generative Systems",
+        "desc": "Implementing text, image, and voice generation tools tailored to your brand's creative requirements."
+      }
     },
     "terminal": {
       "line1": "Training custom model on business data...",
@@ -233,7 +344,10 @@
       "btn": "Send Message",
       "success": "Message sent successfully! I'll get back to you soon.",
       "error": "Something went wrong. Please try again or email me directly."
-    }
+    },
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "businessLabel": "Business Registration"
   },
   "projectDetail": {
     "back": "Back",
@@ -244,7 +358,9 @@
     "process": "The Process",
     "decisions": "Design Decisions",
     "setup": "Technical Setup",
-    "gallery": "Project Gallery"
+    "gallery": "Project Gallery",
+    "notFoundTitle": "Project not found",
+    "notFoundBack": "Back to home"
   },
   "error404": {
     "title": "Lost in Space",
@@ -254,17 +370,35 @@
   "projectData": {
     "matrace-letovice": {
       "title": "Matrace Letovice",
-      "category": "Product Catalog",
+      "category": "Web Creation",
       "desc": "A custom product catalog for a premium mattress manufacturer.",
       "fullDesc": "This project involved creating a robust digital catalog for a high-end mattress manufacturer. The goal was to replace a traditional offline catalog with a modern, high-performance web solution that allows customers to explore products in detail. Built on WordPress for easy content management by the client, but optimized with custom frontend tweaks for a premium feel.",
       "clientGoal": "Present premium mattresses in a professional digital catalog to build brand authority and replace outdated paper brochures with a searchable, high-end online experience.",
       "process": [
-        { "title": "Research", "desc": "Analyzing material textures and product USPs." },
-        { "title": "Wireframing", "desc": "Structuring the catalog for easy navigation." },
-        { "title": "Design", "desc": "Creating a visual system reflecting comfort and quality." },
-        { "title": "WP Setup", "desc": "Implementing a custom-tuned WordPress environment." },
-        { "title": "Customization", "desc": "Building unique product detail templates." },
-        { "title": "Optimization", "desc": "SEO and performance tuning for instant loading." }
+        {
+          "title": "Research",
+          "desc": "Analyzing material textures and product USPs."
+        },
+        {
+          "title": "Wireframing",
+          "desc": "Structuring the catalog for easy navigation."
+        },
+        {
+          "title": "Design",
+          "desc": "Creating a visual system reflecting comfort and quality."
+        },
+        {
+          "title": "WP Setup",
+          "desc": "Implementing a custom-tuned WordPress environment."
+        },
+        {
+          "title": "Customization",
+          "desc": "Building unique product detail templates."
+        },
+        {
+          "title": "Optimization",
+          "desc": "SEO and performance tuning for instant loading."
+        }
       ],
       "designDecisions": [
         "Large, high-quality imagery to emphasize material quality.",
@@ -287,12 +421,30 @@
       "fullDesc": "Jakub Hes required a minimalist yet impactful digital home for his copywriting and visual work. The project focused on 'white space' and typography to let his creative work speak for itself. We implemented smooth page transitions and a custom CMS structure to allow Jakub to update his portfolio seamlessly.",
       "clientGoal": "Create a digital home that highlights creative copy and visual projects while establishing professional credibility for high-end copywriting clients.",
       "process": [
-        { "title": "Workshop", "desc": "Defining the creative direction and voice." },
-        { "title": "Text-First", "desc": "Structuring wireframes around the copy." },
-        { "title": "Minimalism", "desc": "Removing noise to let the work speak." },
-        { "title": "Custom Theme", "desc": "Building a lightweight WordPress logic." },
-        { "title": "CMS Tuning", "desc": "Tailoring the admin area for easy updates." },
-        { "title": "Final Polish", "desc": "Adding subtle, high-end animations." }
+        {
+          "title": "Workshop",
+          "desc": "Defining the creative direction and voice."
+        },
+        {
+          "title": "Text-First",
+          "desc": "Structuring wireframes around the copy."
+        },
+        {
+          "title": "Minimalism",
+          "desc": "Removing noise to let the work speak."
+        },
+        {
+          "title": "Custom Theme",
+          "desc": "Building a lightweight WordPress logic."
+        },
+        {
+          "title": "CMS Tuning",
+          "desc": "Tailoring the admin area for easy updates."
+        },
+        {
+          "title": "Final Polish",
+          "desc": "Adding subtle, high-end animations."
+        }
       ],
       "designDecisions": [
         "Minimalist layout to avoid visual distraction from copy.",
@@ -310,17 +462,35 @@
     },
     "imphreco": {
       "title": "Imphreco",
-      "category": "Web Design",
+      "category": "Web Creation",
       "desc": "Innovative digital branding and interface design.",
       "fullDesc": "Imphreco is a project at the cutting edge of digital branding. The focus was on creating a visual identity that felt futuristic and tech-forward. We developed a series of interactive components and a unique navigation system that reflects the brand's innovative approach to its industry.",
       "clientGoal": "Build an innovative and tech-forward digital brand identity that stands out in a crowded market and builds immediate trust with tech clients.",
       "process": [
-        { "title": "Research", "desc": "Industry and competitor visual analysis." },
-        { "title": "Interactive", "desc": "Prototyping unique user flows." },
-        { "title": "UI Design", "desc": "Crafting a high-fidelity visual system." },
-        { "title": "Architecture", "desc": "Setting up a scalable React environment." },
-        { "title": "Animation", "desc": "Implementing Framer Motion logic." },
-        { "title": "Stress-Test", "desc": "Final performance and cross-device testing." }
+        {
+          "title": "Research",
+          "desc": "Industry and competitor visual analysis."
+        },
+        {
+          "title": "Interactive",
+          "desc": "Prototyping unique user flows."
+        },
+        {
+          "title": "UI Design",
+          "desc": "Crafting a high-fidelity visual system."
+        },
+        {
+          "title": "Architecture",
+          "desc": "Setting up a scalable React environment."
+        },
+        {
+          "title": "Animation",
+          "desc": "Implementing Framer Motion logic."
+        },
+        {
+          "title": "Stress-Test",
+          "desc": "Final performance and cross-device testing."
+        }
       ],
       "designDecisions": [
         "Futuristic aesthetic with vibrant glowing accents.",
@@ -343,12 +513,30 @@
       "fullDesc": "A dedicated project focusing on high-end portrait photography for Veronika Kavanová. The goal was to capture personality through light and shadow, resulting in a series of powerful, storytelling images used for professional branding and personal collections.",
       "clientGoal": "Capture a professional and diverse set of portraits that communicate both personality and professionalism for personal branding.",
       "process": [
-        { "title": "Concept", "desc": "Defining the mood and lighting style." },
-        { "title": "Scouting", "desc": "Selecting locations that match the vision." },
-        { "title": "Shooting", "desc": "Executing the session with Nikon Z Series." },
-        { "title": "Selection", "desc": "Curating the most impactful shots." },
-        { "title": "Grading", "desc": "Applying custom cinematic color palettes." },
-        { "title": "Retouch", "desc": "Fine-tuning details for a polished finish." }
+        {
+          "title": "Concept",
+          "desc": "Defining the mood and lighting style."
+        },
+        {
+          "title": "Scouting",
+          "desc": "Selecting locations that match the vision."
+        },
+        {
+          "title": "Shooting",
+          "desc": "Executing the session with Nikon Z Series."
+        },
+        {
+          "title": "Selection",
+          "desc": "Curating the most impactful shots."
+        },
+        {
+          "title": "Grading",
+          "desc": "Applying custom cinematic color palettes."
+        },
+        {
+          "title": "Retouch",
+          "desc": "Fine-tuning details for a polished finish."
+        }
       ],
       "designDecisions": [
         "Cinematic lighting to create depth and drama.",
@@ -371,12 +559,30 @@
       "fullDesc": "A collection of commercial product shoots, highlighted by the 'Samolepící výztužná páska' project. These shoots require extreme attention to detail, texture, and technical lighting to showcase products in their best possible light for e-commerce and catalog use.",
       "clientGoal": "Highlight product textures and technical details to increase customer confidence and drive sales in catalog environments.",
       "process": [
-        { "title": "Technical", "desc": "Understanding product material properties." },
-        { "title": "Setup", "desc": "Configuring studio macro lighting." },
-        { "title": "Macro", "desc": "Capturing extreme details and textures." },
-        { "title": "Multi-angle", "desc": "Showing the product from all relevant sides." },
-        { "title": "Clean-up", "desc": "Removing imperfections in post-production." },
-        { "title": "Export", "desc": "Optimizing for e-commerce performance." }
+        {
+          "title": "Technical",
+          "desc": "Understanding product material properties."
+        },
+        {
+          "title": "Setup",
+          "desc": "Configuring studio macro lighting."
+        },
+        {
+          "title": "Macro",
+          "desc": "Capturing extreme details and textures."
+        },
+        {
+          "title": "Multi-angle",
+          "desc": "Showing the product from all relevant sides."
+        },
+        {
+          "title": "Clean-up",
+          "desc": "Removing imperfections in post-production."
+        },
+        {
+          "title": "Export",
+          "desc": "Optimizing for e-commerce performance."
+        }
       ],
       "designDecisions": [
         "Sharp focus across the entire product plane.",
@@ -399,12 +605,30 @@
       "fullDesc": "Wildlife Hub is an ongoing passion project dedicated to capturing the raw beauty of the natural world. From birds in flight to macro insect photography, this project pushes the limits of patience and technical skill in the field.",
       "clientGoal": "Capture the unstaged, raw beauty of nature to inspire conservation and appreciation for the natural world.",
       "process": [
-        { "title": "Planning", "desc": "Studying animal behavior and habitats." },
-        { "title": "Fieldwork", "desc": "Spending hours in position for the shot." },
-        { "title": "Capture", "desc": "High-speed tracking of action moments." },
-        { "title": "Authenticity", "desc": "Prioritizing natural moments over staged shots." },
-        { "title": "Atmosphere", "desc": "Enhancing the natural lighting in post." },
-        { "title": "Archive", "desc": "Building a searchable wildlife database." }
+        {
+          "title": "Planning",
+          "desc": "Studying animal behavior and habitats."
+        },
+        {
+          "title": "Fieldwork",
+          "desc": "Spending hours in position for the shot."
+        },
+        {
+          "title": "Capture",
+          "desc": "High-speed tracking of action moments."
+        },
+        {
+          "title": "Authenticity",
+          "desc": "Prioritizing natural moments over staged shots."
+        },
+        {
+          "title": "Atmosphere",
+          "desc": "Enhancing the natural lighting in post."
+        },
+        {
+          "title": "Archive",
+          "desc": "Building a searchable wildlife database."
+        }
       ],
       "designDecisions": [
         "Wide compositions to show habitat context.",
@@ -419,6 +643,41 @@
         "Macro Lens",
         "Adobe Lightroom"
       ]
+    }
+  },
+  "common": {
+    "all": "All"
+  },
+  "links": {
+    "role": "Digital Creator & Developer"
+  },
+  "worksPage": {
+    "eyebrow": "Archive",
+    "titleLead": "All",
+    "titleAccent": "Projects",
+    "description": "A comprehensive collection of my work across development, design, and visual storytelling.",
+    "filters": {
+      "all": "All",
+      "webCreation": "Web Creation",
+      "photography": "Photography"
+    },
+    "emptyTitle": "No projects found in this category",
+    "emptyAction": "Show all projects",
+    "ctaTitle": "Your project could be next.",
+    "ctaDesc": "Ready to build something world-class? Let's discuss your vision and turn it into a high-performance reality.",
+    "ctaButton": "Start a Conversation"
+  },
+  "galleryPage": {
+    "eyebrow": "Visual Archive",
+    "titleLead": "The Full",
+    "titleAccent": "Collection",
+    "categories": {
+      "all": "All",
+      "wildlife": "Wildlife",
+      "portraits": "Portraits",
+      "commercial": "Commercial",
+      "lifestyle": "Lifestyle",
+      "pets": "Pets"
     }
   }
 }
